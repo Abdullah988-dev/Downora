@@ -1,7 +1,8 @@
 import { Check, Download, Loader2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-const API_BASE_URL = "http://localhost:5001";
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5001";
 
 export default function QualitySelector({
   formats = [],
