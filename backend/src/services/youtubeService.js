@@ -1,5 +1,6 @@
 const axios = require("axios");
-const ytdlp = require("youtube-dl-exec");
+const { create } = require("youtube-dl-exec");
+const ytdlp = create(process.env.YTDLP_BINARY || undefined);
 
 function extractYouTubeVideoId(url) {
   try {

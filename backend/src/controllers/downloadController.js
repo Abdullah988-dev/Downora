@@ -3,8 +3,8 @@ const os = require("os");
 const path = require("path");
 const crypto = require("crypto");
 const axios = require("axios");
-const ytdlp = require("youtube-dl-exec");
-
+const { create } = require("youtube-dl-exec");
+const ytdlp = create(process.env.YTDLP_BINARY || undefined);
 const {
   extractYouTubeVideoId,
 } = require("../services/youtubeService");
